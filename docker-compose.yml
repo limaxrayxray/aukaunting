@@ -29,5 +29,5 @@ services:
       - env/db.env
 
 volumes:
-  akaunting-data:
-  akaunting-db:
+  akaunting-data:/volume1/docker/akaunting/data
+  akaunting-db:/volume1/docker/akaunting/db
