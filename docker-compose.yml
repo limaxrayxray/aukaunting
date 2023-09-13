@@ -10,7 +10,7 @@ services:
     ports:
       - 4380:80
     volumes:
-      - akaunting-data:/var/www/html
+      - /volume1/docker/akaunting/data:/var/www/html:rw
     restart: unless-stopped
     env_file:
       - env/run.env
@@ -23,11 +23,9 @@ services:
     container_name: akaunting-db
     image: mariadb
     volumes:
-      - akaunting-db:/var/lib/mysql
+      - /volume1/docker/akaunting/db:/var/lib/mysql:rw
     restart: unless-stopped
     env_file:
       - env/db.env
 
-volumes:
-  akaunting-data:/volume1/docker/akaunting/data
-  akaunting-db:/volume1/docker/akaunting/db
+ 
