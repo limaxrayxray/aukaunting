@@ -10,7 +10,7 @@ services:
     ports:
       - 4380:80
     volumes:
-      - /volume1/docker/akaunting/data:/var/www/html:rw
+      - /volume1/docker/akaunting/data:/var/www/html/storage:rw
     restart: unless-stopped
     env_file:
       - env/run.env
